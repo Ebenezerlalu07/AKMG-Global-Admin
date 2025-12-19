@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin — Join the Network</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#274193",
+              accent: "#f15d2a",
+              pagebg: "#f4f5f7",
+            },
+          },
+        },
+      };
+        </script>
+    </head>
+    <body class="bg-pagebg text-gray-800 font-[Poppins]">
+        <div class="flex h-screen ">
+            <aside id="sidebar" class="fixed lg:static z-40 w-64 bg-white h-full flex flex-col
+         -translate-x-full lg:translate-x-0
+         transition-transform duration-300 ease-in-out">
+                <div class="px-6 py-6">
+                    <img src="/assets/logo.png" class="w-44" alt="AKMD">
+                </div>
+                <nav class="flex-1 space-y-1 relative text-[14px]">
+                    <a href="dashboard.html" data-page="dashboard.html" class="nav-link group relative flex items-center gap-3
+             px-6 py-3 ml-3 mr-4 rounded-xl
+             text-gray-700 transition-all duration-300
+             hover:bg-rgba(39, 65, 147, 0.1) hover:text-brand">
+                        <img src="/assets/icons/icon-1.png" class="w-4 h-4 object-contain transition-all duration-300
+               group-hover:brightness-0 group-hover:invert-[.35]
+               group-[.active]:brightness-0 group-[.active]:invert-[.35]" alt="">
+                        <span class="nav-bar absolute -left-4 top-1 bottom-1 w-2 h-10 bg-brand rounded-lg
+               scale-y-0 opacity-0 transition-all duration-300 origin-center"></span>
+                        <span class="whitespace-nowrap">Join the Network</span>
+                    </a>
+                    <a href="user-lists.html" data-page="user-lists.html" class="nav-link group relative flex items-center gap-3
+             px-6 py-3 ml-3 mr-4 rounded-xl
+             text-gray-700 transition-all duration-300
+             hover:bg-blue-50 hover:text-brand">
+                        <img src="/assets/icons/icon-2.png" class="w-4 h-4 object-contain transition-all duration-300
+               group-hover:brightness-0 group-hover:invert-[.35]
+               group-[.active]:brightness-0 group-[.active]:invert-[.35]" alt="">
+                        <span class="nav-bar absolute -left-3 top-2 bottom-2 w-1 bg-brand rounded-full
+               scale-y-0 opacity-0 transition-all duration-300 origin-center"></span>
+                        <span class="whitespace-nowrap">Login User Lists</span>
+                    </a>
+                    <a href="user-lists.html" data-page="user-lists.html" class="nav-link group relative flex items-center gap-3
+             px-6 py-3 ml-3 mr-4 rounded-xl
+             text-gray-700 transition-all duration-300
+             hover:bg-blue-50 hover:text-brand">
+                        <img src="/assets/icons/icon-3.png" class="w-4 h-4 object-contain transition-all duration-300
+               group-hover:brightness-0 group-hover:invert-[.35]
+               group-[.active]:brightness-0 group-[.active]:invert-[.35]" alt="">
+                        <span class="nav-bar absolute -left-3 top-2 bottom-2 w-1 bg-brand rounded-full
+               scale-y-0 opacity-0 transition-all duration-300 origin-center"></span>
+                        <span class="whitespace-nowrap">Directory Requests</span>
+                    </a>
+                    <a href="user-lists.html" data-page="user-lists.html" class="nav-link group relative flex items-center gap-3
+             px-6 py-3 ml-3 mr-4 rounded-xl
+             text-gray-700 transition-all duration-300
+             hover:bg-blue-50 hover:text-brand">
+                        <img src="/assets/icons/icon-4.png" class="w-4 h-4 object-contain transition-all duration-300
+               group-hover:brightness-0 group-hover:invert-[.35]
+               group-[.active]:brightness-0 group-[.active]:invert-[.35]" alt="">
+                        <span class="nav-bar absolute -left-3 top-2 bottom-2 w-1 bg-brand rounded-full
+               scale-y-0 opacity-0 transition-all duration-300 origin-center"></span>
+                        <span class="whitespace-nowrap">Update User Profile</span>
+                    </a>
+                    <a href="user-lists.html" data-page="user-lists.html" class="nav-link group relative flex items-center gap-3
+             px-6 py-3 ml-3 mr-4 rounded-xl
+             text-gray-700 transition-all duration-300
+             hover:bg-blue-50 hover:text-brand">
+                        <img src="/assets/icons/icon-5.png" class="w-4 h-4 object-contain transition-all duration-300
+               group-hover:brightness-0 group-hover:invert-[.35]
+               group-[.active]:brightness-0 group-[.active]:invert-[.35]" alt="">
+                        <span class="nav-bar absolute -left-3 top-2 bottom-2 w-1 bg-brand rounded-full
+               scale-y-0 opacity-0 transition-all duration-300 origin-center"></span>
+                        <span class="whitespace-nowrap">Manage Admin</span>
+                    </a>
+                    <a href="user-lists.html" data-page="user-lists.html" class="nav-link group relative flex items-center gap-3
+             px-6 py-3 ml-3 mr-4 rounded-xl
+             text-gray-700 transition-all duration-300
+             hover:bg-blue-50 hover:text-brand">
+                        <img src="/assets/icons/icon-6.png" class="w-4 h-4 object-contain transition-all duration-300
+               group-hover:brightness-0 group-hover:invert-[.35]
+               group-[.active]:brightness-0 group-[.active]:invert-[.35]" alt="">
+                        <span class="nav-bar absolute -left-3 top-2 bottom-2 w-1 bg-brand rounded-full
+               scale-y-0 opacity-0 transition-all duration-300 origin-center"></span>
+                        <span class="whitespace-nowrap">Add Manager</span>
+                    </a>
+                </nav>
+                <div class="px-6 pb-6">
+                    <button class="w-full bg-accent text-white py-3 rounded-full font-medium">
+                        Log Out
+                    </button>
+                </div>
+            </aside>
+            <div id="overlay" class="fixed inset-0 bg-black/40 hidden lg:hidden z-30"></div>
+            <div class="flex-1 flex flex-col">
+                <header class="h-16 bg-white flex items-center justify-between px-4 sm:px-6 shrink-0">
+                    <div class="flex items-center gap-3 shrink-0">
+                        <button id="menuBtn" class="lg:hidden text-2xl">☰</button>
+                    </div>
+                    <div class="flex items-center gap-6 shrink-0">
+                        <div class="relative">
+                            <div class="w-10 h-10 flex items-center justify-center
+           rounded-xl
+           bg-[rgba(39,65,147,0.15)]
+           border ">
+                                <img src="/assets/icons/bell.png" class="w-5 h-5 object-contain" alt="Notifications">
+                            </div>
+                            <span class="absolute -top-2 -right-2
+           bg-brand text-white text-[11px]
+           px-1.5 py-0.5 rounded-full font-medium">
+                                21
+                            </span>
+                        </div>
+                        <div class="h-8 w-px bg-gray-300"></div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-sm text-gray-700 whitespace-nowrap">
+                                Hello,
+                                <strong class="font-semibold text-gray-900">Alex Jane</strong>
+                            </span>
+                            <img src="/assets/avatar2.png" class="w-9 h-9 rounded-full object-cover" alt="User avatar">
+                        </div>
+                    </div>
+                </header>
+                <main class="flex-1 overflow-y-auto px-4 py-4 sm:p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h1 class="text-xl text-[#1E1E1E] font-semibold">Welcome Back Alex</h1>
+                            <p class="text-sm text-[#A3A3A3]">Join the Network</p>
+                        </div>
+                        <div class="bg-[rgba(39,65,147,0.10)] text-brand text-[14px] px-10 py-2 rounded-full">
+                            Total Join : 16
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md shadow">
+                        <div class="overflow-y-auto
+         max-h-[calc(100svh-220px)]
+         md:max-h-[520px]
+         lg:max-h-[65vh]
+         2xl:max-h-[72vh]">
+                            <table class="w-full text-sm  border-collapse">
+                                <thead class="sticky top-0 bg-white border-b-2 text-[#343A40] z-10">
+                                    <tr>
+                                        <td class="px-4 py-3 text-left">User Name</td>
+                                        <td class="px-4 py-3 text-left">Designation</td>
+                                        <td class="px-4 py-3 text-left">E - Mail</td>
+                                        <td class="px-4 py-3 text-left">Whatsapp Number</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y text-[#6C757D]">
+                                    <tr>
+                                        <td class="px-4 py-3">Arlin Rajan</td>
+                                        <td class="px-4 py-3">
+                                            MBBS, DGO (Gynecologist & Obstetrician), UAE
+                                        </td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Arlene McCoy</td>
+                                        <td class="px-4 py-3">MD (Dermatologist), USA</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Cody Fisher</td>
+                                        <td class="px-4 py-3">MD (Neurologist), USA</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Esther Howard</td>
+                                        <td class="px-4 py-3">MBBS, MS (General Surgeon)</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Ronald Richards</td>
+                                        <td class="px-4 py-3">Dental Doctor, USA</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Albert Flores</td>
+                                        <td class="px-4 py-3">MD (Oncologist), USA</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Marvin McKinney</td>
+                                        <td class="px-4 py-3">MD (Oncologist), UK</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Floyd Miles</td>
+                                        <td class="px-4 py-3">MD (Pediatrician), India</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Courtney Henry</td>
+                                        <td class="px-4 py-3">MD (Neurologist), USA</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Guy Hawkins</td>
+                                        <td class="px-4 py-3">MD (Neurologist), USA</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Ralph Edwards</td>
+                                        <td class="px-4 py-3">Dental Doctor, USA</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Devon Lane</td>
+                                        <td class="px-4 py-3">
+                                            MBBS, DGO (Gynecologist & Obstetrician)
+                                        </td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Jenny Wilson</td>
+                                        <td class="px-4 py-3">Dental Doctor, USA</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Bessie Cooper</td>
+                                        <td class="px-4 py-3">MD (Neurologist), USA</td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Cameron Williamson</td>
+                                        <td class="px-4 py-3">
+                                            MBBS, DGO (Gynecologist & Obstetrician)
+                                        </td>
+                                        <td class="px-4 py-3">doctor@gmail.com</td>
+                                        <td class="px-4 py-3">+1 658422541</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+
+      menuBtn.onclick = () => {
+        sidebar.classList.remove("-translate-x-full");
+        overlay.classList.remove("hidden");
+      };
+
+      overlay.onclick = () => {
+        sidebar.classList.add("-translate-x-full");
+        overlay.classList.add("hidden");
+      };
+
+      const current = window.location.pathname.split("/").pop();
+
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    const bar = link.querySelector(".nav-bar");
+
+    if (link.dataset.page === current) {
+      link.classList.add(
+        "active",
+        "bg-blue-50",
+        "text-brand",
+        "font-medium"
+      );
+
+      bar.classList.remove("scale-y-0", "opacity-0");
+      bar.classList.add("scale-y-100", "opacity-100");
+    }
+  });
+    </script>
+</body>
+</html>
