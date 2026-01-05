@@ -21,6 +21,10 @@
         </script>
     </head>
     <body class="bg-pagebg text-gray-800 font-[Poppins] min-h-screen">
+        <!-- Page Loader -->
+        <div id="pageLoader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-300">
+            <div class="w-12 h-12 rounded-full border-4 border-brand border-t-transparent animate-spin"></div>
+        </div>
         <div class="flex min-h-screen overflow-hidden">
             <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-white
          flex flex-col
@@ -901,9 +905,21 @@
                         <span class="text-[#000000]"> United States of America</span>
                     </p>
                 </div>
-                <div class="">
-                    <button class="flex-1 bg-[#46AD48] text-[10px] text-white py-2 px-10 rounded-full">Approve</button>
-                    <button class="flex-1 bg-[#F12A2A] text-[10px] text-white py-2 px-10 rounded-full">Reject</button>
+                <div class="hidden sm:block">
+                    <button class="flex-1 bg-[#46AD48] text-[10px] text-white py-2 px-10 rounded-full">
+                        Approve
+                    </button>
+                    <button class="flex-1 bg-[#F12A2A] text-[10px] text-white py-2 px-10 rounded-full">
+                        Reject
+                    </button>
+                </div>
+                <div class="flex sm:hidden gap-1 flex-nowrap w-full overflow-hidden">
+                    <button class="flex-1 bg-[#46AD48] text-[10px] text-white py-2 px-8 rounded-full whitespace-nowrap">
+                        Approve
+                    </button>
+                    <button class="flex-1 bg-[#F12A2A] text-[10px] text-white py-2 px-8 rounded-full whitespace-nowrap">
+                        Reject
+                    </button>
                 </div>
             </div>
         </div>
@@ -948,6 +964,16 @@
     document.getElementById("modalOverlay").classList.add("hidden");
     document.getElementById("modalOverlay").classList.remove("flex");
   }
+        </script>
+        <script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("pageLoader");
+    loader.classList.add("opacity-0");
+
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 300);
+  });
         </script>
     </body>
 </html>

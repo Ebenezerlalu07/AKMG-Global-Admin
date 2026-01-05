@@ -66,6 +66,10 @@
     <body class="font-poppins min-h-screen bg-white lg:bg-white
     max-lg:bg-[url('/assets/login.png')] bg-cover bg-top
     relative">
+        <!-- Page Loader -->
+        <div id="pageLoader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-100">
+            <div class="w-12 h-12 rounded-full border-4 border-brand border-t-transparent animate-spin"></div>
+        </div>
         <div class="absolute inset-0 bg-black/70 lg:hidden" aria-hidden="true"></div>
         <div class="relative flex min-h-screen">
             <div class="w-full lg:w-1/2 flex flex-col items-center justify-center
@@ -118,5 +122,15 @@
                 <img src="/assets/login.png" alt="Login visual" class="w-full h-full object-cover">
             </div>
         </div>
+        <script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("pageLoader");
+    loader.classList.add("opacity-0");
+
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 300);
+  });
+        </script>
     </body>
 </html>

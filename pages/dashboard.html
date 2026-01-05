@@ -21,6 +21,10 @@
         </script>
     </head>
     <body class="bg-pagebg text-gray-800 font-[Poppins] min-h-screen">
+        <!-- Page Loader -->
+        <div id="pageLoader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-300">
+            <div class="w-12 h-12 rounded-full border-4 border-brand border-t-transparent animate-spin"></div>
+        </div>
         <div class="flex min-h-screen overflow-hidden">
             <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-white
          flex flex-col
@@ -460,36 +464,41 @@
         </div>
     </div>
     <script>
-      const menuBtn = document.getElementById("menuBtn");
-      const sidebar = document.getElementById("sidebar");
-      const overlay = document.getElementById("overlay");
+  const menuBtn = document.getElementById("menuBtn");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
 
-      menuBtn.onclick = () => {
-        sidebar.classList.remove("-translate-x-full");
-        overlay.classList.remove("hidden");
-      };
+  menuBtn.onclick = () => {
+    requestAnimationFrame(() => {
+      sidebar.classList.remove("-translate-x-full");
+      overlay.classList.remove("hidden");
+    });
+  };
 
-      overlay.onclick = () => {
-        sidebar.classList.add("-translate-x-full");
-        overlay.classList.add("hidden");
-      };
+  overlay.onclick = () => {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+  };
 
-      const current = window.location.pathname.split("/").pop();
-
+  // active menu highlight
+  const current = window.location.pathname.split("/").pop();
   document.querySelectorAll(".nav-link").forEach((link) => {
     const bar = link.querySelector(".nav-bar");
-
     if (link.dataset.page === current) {
-      link.classList.add(
-        "active",
-        "bg-blue-50",
-        "text-brand",
-        "font-medium"
-      );
-
+      link.classList.add("active", "bg-blue-50", "text-brand", "font-medium");
       bar.classList.remove("scale-y-0", "opacity-0");
       bar.classList.add("scale-y-100", "opacity-100");
     }
+  });
+    </script>
+    <script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("pageLoader");
+    loader.classList.add("opacity-0");
+
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 300);
   });
     </script>
 </body>
